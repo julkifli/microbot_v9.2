@@ -8,8 +8,9 @@ in the shortest possible time.
 
 *Required Pololu QTR Sensor 3.0.0 Library:
 https://github.com/pololu/qtr-sensors-arduino/archive/3.0.0.zip
-<p align="center">
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/0iFmb0SX3h4/0.jpg)](http://www.youtube.com/watch?v=0iFmb0SX3h4)</p>
+<div align="center">
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/0iFmb0SX3h4/0.jpg)](http://www.youtube.com/watch?v=0iFmb0SX3h4)</div>
+
 ![alt_tag](https://raw.githubusercontent.com/julkifli/microbot_v9.2/master/images/mini2.jpg)
 
 ![alt_tag](https://raw.githubusercontent.com/julkifli/microbot_v9.2/master/images/mini3.jpg)
