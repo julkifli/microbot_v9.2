@@ -1,8 +1,8 @@
 /*
 Julkifli Awang Besar
-TB6612FNG
+TB6612FNG test for Microbot 9.2
 Motordriver test
- */ 
+ */
 
 
 
@@ -47,5 +47,3 @@ analogWrite(PWMA, 100);
 
 
 }
-
-

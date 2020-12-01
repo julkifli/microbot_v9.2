@@ -1,5 +1,10 @@
 //TB6612FNG function
 //for MiCROBOT
+/*
+Julkifli Awang Besar
+TB6612FNG test for Microbot 9.2
+Motordriver test with function and buton/led
+ */
 
 
 #define pwm_L  5   //PWM LEFT MOTOR
@@ -23,14 +28,14 @@ void setup() {
 
 pinMode(pin_switch, INPUT);
 
-pinMode(pin_LED1, OUTPUT);  
-pinMode(pin_LED2, OUTPUT); 
-pinMode(buzzerPin,OUTPUT); 
+pinMode(pin_LED1, OUTPUT);
+pinMode(pin_LED2, OUTPUT);
+pinMode(buzzerPin,OUTPUT);
 
-digitalWrite(pin_LED1,LOW); 
-digitalWrite(pin_LED2,LOW); 
+digitalWrite(pin_LED1,LOW);
+digitalWrite(pin_LED2,LOW);
 
-TCCR2B = TCCR2B & B11111000 | B00000011;   
+TCCR2B = TCCR2B & B11111000 | B00000011;
 //set timer 2 divisor to    32 for PWM frequency of   980.39 Hz
 
 
@@ -52,24 +57,24 @@ void loop()
     newSwitchState = digitalRead(pin_switch);
 
 
-    if ( newSwitchState != oldSwitchState ) 
+    if ( newSwitchState != oldSwitchState )
     {
        // has the button switch been closed?
        if ( newSwitchState == HIGH )
        {
-           if ( LEDstatus == LOW ) { 
-            motores(100,100); 
-            digitalWrite(pin_LED1, HIGH);  
-            digitalWrite(pin_LED2, HIGH);  
+           if ( LEDstatus == LOW ) {
+            motores(100,100);
+            digitalWrite(pin_LED1, HIGH);
+            digitalWrite(pin_LED2, HIGH);
             LEDstatus = HIGH; }
-          else{ 
-            motores(0,0); 
+          else{
+            motores(0,0);
             digitalWrite(pin_LED1, LOW);
-            digitalWrite(pin_LED2, LOW);     
+            digitalWrite(pin_LED2, LOW);
             LEDstatus = LOW;  }
        }
        oldSwitchState = newSwitchState;
-    }   
+    }
 }
 
 
@@ -84,7 +89,7 @@ void motores(int left, int right){   //0 until 255    0 until -255
     left=left*(-1);
   }
   analogWrite(pwm_L,left);
-  
+
   ////////////////motor RIGHT  ////////////////////////
   if(right >= 0){
     digitalWrite(right1,HIGH);
@@ -95,5 +100,5 @@ void motores(int left, int right){   //0 until 255    0 until -255
     right=right*(-1);
   }
   analogWrite(pwm_R,right);
-  
+
 }
