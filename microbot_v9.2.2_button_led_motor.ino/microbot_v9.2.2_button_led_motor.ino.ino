@@ -63,12 +63,12 @@ void loop()
        if ( newSwitchState == HIGH )
        {
            if ( LEDstatus == LOW ) {
-            motores(100,100);
+            motor(100,100);
             digitalWrite(pin_LED1, HIGH);
             digitalWrite(pin_LED2, HIGH);
             LEDstatus = HIGH; }
           else{
-            motores(0,0);
+            motor(0,0);
             digitalWrite(pin_LED1, LOW);
             digitalWrite(pin_LED2, LOW);
             LEDstatus = LOW;  }
@@ -78,7 +78,7 @@ void loop()
 }
 
 
-void motores(int left, int right){   //0 until 255    0 until -255
+void motor(int left, int right){   //0 until 255    0 until -255
   ////////////////motor LEFT  ////////////////////////
   if(left >= 0){
     digitalWrite(left1,HIGH);
