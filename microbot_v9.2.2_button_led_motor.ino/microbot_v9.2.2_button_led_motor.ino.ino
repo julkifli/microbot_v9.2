@@ -17,8 +17,8 @@ Motordriver test with function and buton/led
 
 const int buzzerPin = 10;
 const int pin_switch = 12;
-const int pin_LED1 =  A1;      // the number of the LED pin
-const int pin_LED2 =  A0;
+const int pin_LED1 =  A1;      // LED 1 pin
+const int pin_LED2 =  A0;       // LED 2 pin
 
 boolean oldSwitchState = LOW;
 boolean newSwitchState = LOW;
