@@ -17,7 +17,7 @@
 #define EMITTER_PIN             QTR_NO_EMITTER_PIN  // emitter is controlled by digital pin 2
 
 // sensors 0 through 4 are connected to analog inputs 0 through 4, respectively
-QTRSensorsAnalog qtra((unsigned char[]) {A0, A1 ,A2 , A3, A6},
+QTRSensorsAnalog qtra((unsigned char[]) {A3, A4 ,A5 , A6, A7},
   NUM_SENSORS, NUM_SAMPLES_PER_SENSOR, EMITTER_PIN);
 unsigned int sensorValues[NUM_SENSORS];
 
